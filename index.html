@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+   
+</head>
+<body>
+    <div class="container" >
+
+       <h1 class=" text-center w-100 my-4 p-4 c" >Product Managment System </h1>
+
+       <label for="" class="c"> Product Name :</label>
+       <input oninput="ValidationName()" type="text" placeholder="Product Name" id="Productname" class=" tr form-control mb-4 is-invalid ">
+
+       <label for="" class="c">Product Price :</label>
+       <input oninput="ValidationPrice()" type="text" placeholder="Product Price" id="ProductPrice" class="tr form-control mb-4 is-invalid">
+       <label for="" class="c">Product Category :</label>
+
+       <input oninput="ValidationCategory()" type="text" placeholder="Product Category" id="ProductCategory" class=" tr form-control mb-4 is-invalid">
+       <label for="" class="c">Product Description :</label>
+
+       <textarea oninput="ValidationDescription()" type="text" placeholder="Product Description" id="ProductDescription" class="tr form-control mb-5 is-invalid"></textarea>
+
+       <div class="text-center">
+         <button onclick="store()" id="AddProduct"class="btn btn-success fw-semibold px-5 rounded-3">Add Product</button>
+         <button onclick="edit()" id = "Edit" class="d-none btn btn-outline-info fw-semibold px-5 rounded-3">Edit</button>
+         <button onclick="cancel()" id = "Cancel" class="d-none btn btn-outline-danger fw-semibold px-5 rounded-3">Cancel</button>
+       </div>
+
+    </div>   
+
+    <div class="d-flex justify-content-center">
+        <input type="text" oninput = "search(this.value)" class=" br form-control w-75 rounded-4 m-5 p-2 " placeholder="Search bar">
+    </div> 
+
+    <div class="container">
+
+    <table  class=" table table-group-divider table-bordered">
+        <thead>
+            <tr>
+                <th class="text-center">Name</th>
+                <th class="text-center">Price</th>
+                <th class="text-center">Category</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablebody">
+            
+        </tbody>
+    </table>
+
+    </div>
+
+    <div class="text-center">
+    <button onclick="ClearAllData()" id="Clearall" class="d-none btn btn-danger px-5 my-3">Clear all</button>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

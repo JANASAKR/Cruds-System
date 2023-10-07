@@ -1,0 +1,14 @@
+.c{
+    color:black;
+    font-weight: bolder;
+
+}
+.br{
+    border-color: black;
+    border-width: 2px;
+    transition: all 0.5s;
+
+}
+.tr{
+    transition: all 0.5s;
+} 
